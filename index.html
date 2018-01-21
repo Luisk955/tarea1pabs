@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Taller Rapidito</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <p class="navbar-text"><a class="navbar-link" href="index.html">Home</a></p>
+            <p class="navbar-text"><a class="navbar-link" href="listaClientes.html">Lista Clientes</a></p>
+            <p class="navbar-text"><a class="navbar-link" href="listaVehiculos.html">Lista Vehiculos</a></p>
+        </div>
+      </nav>
+    <div class="container">
+        <form action="" class="form col-md-6">
+            <legend>Registrar Cliente</legend>
+            <div class="form-group">
+                <label for="txtCedula" class="form-control">Numero de Cedula</label>
+                <input type="text" class="form-control" id="txtCedula" required data-error:"Campo requerido">
+            </div>
+            <div class="form-group">
+                <label for="" class="form-control">Nombre</label>
+                <input type="text" id="txtNombre" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txtPrimerApellido" class="form-control">Primer Apellido</label>
+                <input type="text" id="txtPrimerApellido" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txtSegundoApellido" class="form-control">Segundo Apellido</label>
+                <input type="text" id="txtSegundoApellido" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txtTelefono" class="form-control">Telefono</label>
+                <input type="text" id="txtTelefono" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txtEmail" class="form-control">Email</label>
+                <input type="text" id="txtEmail" class="form-control">
+            </div>
+            <button type="button" class="btn btn-default" id="btnRegistrarCliente">Registrar</button>
+        </form>   
+        <!--</div>
+        <div class="container">-->
+        <form class="form col-md-6"><!--col-md-offset-6-->
+            <legend>Registrar Vehiculo</legend>
+            <div class="form-group">
+                <label for="sltCliente" class="form-control">Cliente</label>
+                <select name="Cedula" class="form-control" id="sltCliente">
+                    <option value="">--Seleccione--</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="txtMatricula" class="form-control ">Matricula</label>
+                <input type="text" class="form-control" id="txtMatricula" placeholder="" required>
+            </div>
+             <div class="form-group">
+                <label for="txtMarca" class="form-control">Marca</label>
+                <input type="text" class="form-control" id="txtMarca" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="txtModelo" class="form-control">Modelo</label>
+                <input type="text" class="form-control" id="txtModelo" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="txtAnno" class="form-control">Anno</label>
+                <input type="text" class="form-control" id="txtAnno" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="txtCapacidad" class="form-control">Capacidad</label>
+                <input type="text" class="form-control" id="txtCapacidad" placeholder="">
+            </div> 
+            <div class="form-group">
+                <label for="txtKilometraje" class="form-control">Kilometraje</label>
+                <input type="text" class="form-control" id="txtKilometraje" placeholder="">
+            </div>                                                        
+            <!--<div class="checkbox">
+                <label>
+                    <input type="checkbox" value="aire"> Aire Acondicionado
+                </label>
+            </div>-->
+            <button type="button" class="btn btn-default" id="btnRegistrarVehiculo">Registrar</button>
+        </form>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/clases.js"></script>
+    <script src="js/servicioVehiculo.js"></script>
+    <script src="js/servicioCliente.js"></script>
+    <script src="js/controladorVehiculo.js"></script>
+    <script src="js/controladorCliente.js"></script>
+</body>
+</html>
