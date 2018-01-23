@@ -3,7 +3,7 @@ function registrarCliente(pObjCliente){
     
     listaClientes.push(pObjCliente);
     localStorage.setItem('listaClientesLS', JSON.stringify(listaClientes));
-
+    mostrarDatosTablaClientes();
 }
 
 function getClientes(){
@@ -15,7 +15,13 @@ function getClientes(){
     }else{
         listaClientes.forEach(obj =>{
             let objCliente = new Cliente(obj.cedula, obj.nombre, obj.primerApellido, obj.segundoApellido, obj.telefono, obj.email);    
+            if (obj.listaVehiculos != []){
+                for(var i=0; i < obj.listaVehiculos.length; i++){
+                    objCliente.agregarVehiculo(obj.listaVehiculos[i]);
+                }   
+            }
             clientes.push(objCliente);
+            console.log(objCliente);
         })
     }
 

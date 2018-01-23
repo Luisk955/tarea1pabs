@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <p class="navbar-text"><a class="navbar-link" href="index.html">Inicio</a></p>
+            <p class="navbar-text"><a class="navbar-link" href="listaClientes.html">Clientes</a></p>
+            <p class="navbar-text"><a class="navbar-link" href="listaVehiculos.html">Vehiculos</a></p>
+            <p class="navbar-text"><a class="navbar-link" href="listaTrabajos.html">Trabajos</a></p>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="container-fluid">
+            <form action="" class="form col-md-2">
+            <legend>Nuevo Trabajo</legend>
+            <div class="form-group">
+                <label for="sltVehiculo">Vehiculo</label>
+                <select name="" id="sltVehiculo" class="form-control">
+                    <option value="">Seleccione</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="txtNombreTrabajo">Nombre Trabajo</label>
+                <input type="text" id="txtNombreTrabajo" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txtDescripcionTrabajo">Descripcion Trabajo</label>
+                <input type="text" id="txtDescripcionTrabajo" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="txtFecha">Fecha</label>
+                <input type="text" class="form-control" id="txtFecha">
+            </div>
+            <div class="form-group">
+                <label for="txtEstado">Estado</label>
+                <input type="text" class="form-control" id="txtEstado">
+            </div>
+            <div class="form-group">
+                <label for="txtCosto">Costo</label>
+                <input type="text" class="form-control" id="txtCosto">
+            </div>
+            <button type="button" class="btn btn-default" id="btnRegistrarTrabajo">Registrar</button>
+        </form>
+            <div class="table-responsive">
+                <table class="table table-hover" id="tblTrabajos">
+                <legend>Listado de Trabajos</legend>
+                <thead>
+                    <tr>
+                        <th>Vehiculo</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Costo</th>
+                    </tr>
+                </thead>    
+                <tbody></tbody>
+                </table>
+            </div>    
+        </div>
+    </div>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/clases.js"></script>
+    <script src="js/servicioCliente.js"></script>
+    <script src="js/servicioTrabajo.js"></script>
+    <script src="js/servicioVehiculo.js"></script>
+    <script src="js/controladorTrabajo.js"></script>
+    <script src="js/controlador.listatrabajos.js"></script>    
+</body>
+</html>

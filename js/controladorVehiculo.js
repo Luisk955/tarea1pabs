@@ -14,7 +14,6 @@ function obtenerDatosRegistroVehiculo(){
 
     let objVehiculo = new Vehiculo(cliente, matricula, marca, modelo, anno, capacidad, kilometraje);
     let listaClientes = getClientes();
-    console.log(listaClientes); 
     registrarVehiculo(objVehiculo);
     console.log(objVehiculo);
 

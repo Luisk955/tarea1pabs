@@ -6,7 +6,7 @@ class Cliente{
         this.segundoApellido = pSegundoApellido;
         this.telefono = pTelefono;
         this.email = pEmail;
-        this.listaVehiculos = []
+        this.listaVehiculos = [];
     }
     
     agregarVehiculo(pVehiculo){
@@ -32,9 +32,10 @@ class Vehiculo{
 }
 
 class Trabajo{
-    constructor(pNombre, pDescripcion, pFecha, pEstado, pCosto){
-        this.nombre = pNombre;
-        this.descripcion = pDescripcion;
+    constructor(pVehiculo, pNombre, pDescripcion, pFecha, pEstado, pCosto){
+        this.vehiculo = pVehiculo;
+        this.nombreTrabajo = pNombre;
+        this.descripcionTrabajo = pDescripcion;
         this.fecha = pFecha;
         this.estado = pEstado;
         this.costo = pCosto;

@@ -12,6 +12,8 @@ function mostrarDatosTablaVehiculos(){
         fila.insertCell().innerHTML = objVehiculo.modelo;
         fila.insertCell().innerHTML = objVehiculo.anno;
         fila.insertCell().innerHTML = objVehiculo.capacidad;
-        fila.insertCell().innerHTML = objVehiculo.kilometraje;           
+        fila.insertCell().innerHTML = objVehiculo.kilometraje;
+        fila.insertCell().innerHTML = objVehiculo.listaTrabajos; 
+        console.log(objVehiculo.listaTrabajos);         
     });
 }

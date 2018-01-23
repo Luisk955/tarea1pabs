@@ -11,6 +11,7 @@ function mostrarDatosTablaClientes(){
         fila.insertCell().innerHTML = objCliente.primerApellido;
         fila.insertCell().innerHTML = objCliente.segundoApellido;
         fila.insertCell().innerHTML = objCliente.telefono;
-        fila.insertCell().innerHTML = objCliente.email;           
+        fila.insertCell().innerHTML = objCliente.email;
+        fila.insertCell().innerHTML = objCliente.listaVehiculos;           
     });
 }

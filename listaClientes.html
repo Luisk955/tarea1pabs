@@ -9,35 +9,68 @@
 </head>
 <body>
     <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <p class="navbar-text"><a class="navbar-link" href="index.html">Home</a></p>
-            <p class="navbar-text"><a class="navbar-link" href="listaClientes.html">Lista Clientes</a></p>
-            <p class="navbar-text"><a class="navbar-link" href="listaVehiculos.html">Lista Vehiculos</a></p>
+        <div class="container-fluid">
+            <p class="navbar-text"><a class="navbar-link" href="index.html">Inicio</a></p>
+            <p class="navbar-text"><a class="navbar-link" href="listaClientes.html">Clientes</a></p>
+            <p class="navbar-text"><a class="navbar-link" href="listaVehiculos.html">Vehiculos</a></p>
+            <p class="navbar-text"><a class="navbar-link" href="listaTrabajos.html">Trabajos</a></p>
         </div>
-      </nav>
-    <div class="container">
-        <legend>Listado de Clientes</legend>
-        <table class="table table-hover" id="tblClientes">
-            <thead>
-                <tr>
-                    <th>Numero de Cedula</th>
-                    <th>Nombre</th>
-                    <th>Primer Apellido</th>
-                    <th>Segundo Apellido</th>
-                    <th>Telefono</th>
-                    <th>Email</th>
-                </tr>
-            </thead>    
-            <tbody>    
-
-            </tbody>
-        </table>
+    </nav>   
+    <div class="row">
+        <div class="container-fluid">   
+            <form action="" class="form col-md-2">
+                <legend>Nuevo Cliente</legend>
+                <div class="form-group">
+                    <label for="txtCedula">Numero de Cedula</label>
+                    <input type="text" class="form-control" id="txtCedula" required data-error: "Campo requerido">
+                </div>
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input type="text" id="txtNombre" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="txtPrimerApellido">Primer Apellido</label>
+                    <input type="text" id="txtPrimerApellido" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="txtSegundoApellido">Segundo Apellido</label>
+                    <input type="text" id="txtSegundoApellido" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="txtTelefono">Telefono</label>
+                    <input type="text" id="txtTelefono" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="txtEmail">Email</label>
+                    <input type="text" id="txtEmail" class="form-control">
+                </div>
+                <button type="button" class="btn btn-default" id="btnRegistrarCliente">Registrar</button>
+            </form>
+            <div class="table-responsive">
+                <table class="table table-hover" id="tblClientes">
+                    <legend>Lista Clientes</legend>
+                    <thead>
+                        <tr>
+                            <th>Cedula</th>
+                            <th>Nombre</th>
+                            <th>1er Apellido</th>
+                            <th>2do Apellido</th>
+                            <th>Telefono</th>
+                            <th>Email</th>
+                            <th>Lista Vehiculos</th>
+                        </tr>
+                    </thead>    
+                    <tbody></tbody>
+                </table>
+            </div>    
+        </div>   
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/clases.js"></script>
+    <script src="js/controladorCliente.js"></script>
     <script src="js/servicioCliente.js"></script>
     <script src="js/controlador.listaclientes.js"></script>    
 </body>
