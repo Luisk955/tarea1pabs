@@ -3,7 +3,6 @@ function registrarCliente(pObjCliente){
     
     listaClientes.push(pObjCliente);
     localStorage.setItem('listaClientesLS', JSON.stringify(listaClientes));
-    mostrarDatosTablaClientes();
 }
 
 function getClientes(){
@@ -15,15 +14,42 @@ function getClientes(){
     }else{
         listaClientes.forEach(obj =>{
             let objCliente = new Cliente(obj.cedula, obj.nombre, obj.primerApellido, obj.segundoApellido, obj.telefono, obj.email);    
-            if (obj.listaVehiculos != []){
-                for(var i=0; i < obj.listaVehiculos.length; i++){
-                    objCliente.agregarVehiculo(obj.listaVehiculos[i]);
-                }   
-            }
+            
+            obj.listaVehiculos.forEach(objVehiculoTemp =>{
+                let objVehiculo = new Vehiculo(objVehiculoTemp.matricula, objVehiculoTemp.marca, objVehiculoTemp.modelo, objVehiculoTemp.anno, objVehiculoTemp.capacidad, objVehiculoTemp.kilometraje);
+
+                objVehiculoTemp.listaTrabajos.forEach(objTrabajoTemp =>{
+                    let objTrabajo = new Trabajo(objTrabajoTemp.nombre, objTrabajoTemp.descripcion, objTrabajoTemp.fecha, objTrabajoTemp.estado, objTrabajoTemp.costo);
+                    objVehiculo.agregarTrabajo(objTrabajo);
+                });
+
+                objCliente.agregarVehiculo(objVehiculo);
+            });
             clientes.push(objCliente);
-            console.log(objCliente);
         })
     }
-
     return clientes;
+}
+
+function buscarClientePorCedula(pCedula){
+    let listaClientes = getClientes();
+    
+    let clienteEncontrado;
+    
+    listaClientes.forEach(objClienteTemp =>{
+        if(pCedula == objClienteTemp.cedula){
+            clienteEncontrado = objClienteTemp;
+        };
+    });
+    return clienteEncontrado;
+}
+
+function actualizarCliente(pObjCliente){
+    let listaClientes = getClientes();
+        for (let i = 0; i < listaClientes.length; i++){
+            if (listaClientes[i].cedula == pObjCliente.cedula){
+                listaClientes[i] = pObjCliente;
+                localStorage.setItem('listaClientesLS', JSON.stringify(listaClientes));
+            }
+        }
 }

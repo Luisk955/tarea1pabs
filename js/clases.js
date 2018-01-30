@@ -15,8 +15,7 @@ class Cliente{
 }
 
 class Vehiculo{
-    constructor(pCliente, pMatricula, pMarca, pModelo, pAnno, pCapacidad, pKilometraje/*, pAire*/){
-        this.cliente = pCliente;
+    constructor(pMatricula, pMarca, pModelo, pAnno, pCapacidad, pKilometraje/*, pAire*/){
         this.matricula = pMatricula;
         this.marca = pMarca;
         this.modelo = pModelo;
@@ -32,10 +31,9 @@ class Vehiculo{
 }
 
 class Trabajo{
-    constructor(pVehiculo, pNombre, pDescripcion, pFecha, pEstado, pCosto){
-        this.vehiculo = pVehiculo;
-        this.nombreTrabajo = pNombre;
-        this.descripcionTrabajo = pDescripcion;
+    constructor(pNombre, pDescripcion, pFecha, pEstado, pCosto){
+        this.nombre = pNombre;
+        this.descripcion = pDescripcion;
         this.fecha = pFecha;
         this.estado = pEstado;
         this.costo = pCosto;

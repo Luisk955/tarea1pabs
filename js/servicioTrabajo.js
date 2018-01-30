@@ -1,24 +1,9 @@
-function registrarTrabajo(pObjTrabajo){
-    let listaTrabajos = getTrabajos();
-    
-    listaTrabajos.push(pObjTrabajo);
-    localStorage.setItem('listaTrabajosLS', JSON.stringify(listaTrabajos));
-    mostrarDatosTablaTrabajos();
-
-}
-
 function getTrabajos(){
-    let listaTrabajos = JSON.parse(localStorage.getItem('listaTrabajosLS'));
-    let trabajos = [];
-
-    if(listaTrabajos == null){
-        trabajos = [];
-    }else{
-        listaTrabajos.forEach(obj =>{
-            let objTrabajo = new Trabajo(obj.vehiculo, obj.nombreTrabajo, obj.descripcionTrabajo, obj.fecha, obj.estado, obj.costo);    
-            trabajos.push(objTrabajo);
-        })
-    }
-
+    let matricula = localStorage.getItem('matriculaSeleccionadaLS');
+    let vehiculo = buscarVehiculoPorMatricula(matricula);
+    let trabajos = vehiculo.listaTrabajos;
+    
     return trabajos;
+    console.log(trabajos);
+
 }

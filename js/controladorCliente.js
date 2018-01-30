@@ -14,4 +14,5 @@ function obtenerDatosRegistroCliente(){
 
     registrarCliente(objCliente);
     console.log(objCliente);
+    mostrarDatosTablaClientes();
 }

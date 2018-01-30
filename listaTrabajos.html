@@ -12,8 +12,6 @@
         <div class="container-fluid">
             <p class="navbar-text"><a class="navbar-link" href="index.html">Inicio</a></p>
             <p class="navbar-text"><a class="navbar-link" href="listaClientes.html">Clientes</a></p>
-            <p class="navbar-text"><a class="navbar-link" href="listaVehiculos.html">Vehiculos</a></p>
-            <p class="navbar-text"><a class="navbar-link" href="listaTrabajos.html">Trabajos</a></p>
         </div>
     </nav>
     <div class="row">
@@ -21,18 +19,12 @@
             <form action="" class="form col-md-2">
             <legend>Nuevo Trabajo</legend>
             <div class="form-group">
-                <label for="sltVehiculo">Vehiculo</label>
-                <select name="" id="sltVehiculo" class="form-control">
-                    <option value="">Seleccione</option>
-                </select>
-            </div>
-            <div class="form-group">
                 <label for="txtNombreTrabajo">Nombre Trabajo</label>
-                <input type="text" id="txtNombreTrabajo" class="form-control">
+                <input type="text" id="txtNombre" class="form-control">
             </div>
             <div class="form-group">
                 <label for="txtDescripcionTrabajo">Descripcion Trabajo</label>
-                <input type="text" id="txtDescripcionTrabajo" class="form-control">
+                <input type="text" id="txtDescripcion" class="form-control">
             </div>
             <div class="form-group">
                 <label for="txtFecha">Fecha</label>
@@ -53,7 +45,6 @@
                 <legend>Listado de Trabajos</legend>
                 <thead>
                     <tr>
-                        <th>Vehiculo</th>
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Fecha</th>
@@ -73,9 +64,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/clases.js"></script>
     <script src="js/servicioCliente.js"></script>
+    <script src="js/servicioVehiculos.js"></script>
     <script src="js/servicioTrabajo.js"></script>
-    <script src="js/servicioVehiculo.js"></script>
-    <script src="js/controladorTrabajo.js"></script>
-    <script src="js/controlador.listatrabajos.js"></script>    
+    <script src="js/controlador.registrarTrabajos.js"></script>
+    <script src="js/controlador.listatrabajos.js"></script>  
 </body>
 </html>
